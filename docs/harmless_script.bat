@@ -1,8 +1,12 @@
 @echo off
-echo Simulating a harmless \"malicious\" action by opening multiple browser tabs...
-start https://example.com
-start https://phishing-awareness.org
-start https://cybersecurity-insights.com
-start https://stay-safe-online.net
-echo Browser tabs have been opened. This is a harmless demo!
+
+for /l %%i in (1,1,5) do (
+    echo You have been "hacked"! > hacked_file_%%i.txt
+)
+
+echo ==========================================
+echo "WARNING: Your system has been hacked!"
+echo ==========================================
+echo Fake text files have been created in this directory.
+echo This is a harmless demonstration.
 pause
