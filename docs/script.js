@@ -14,6 +14,14 @@ function handleSubmit() {
     // Display the result message in the form container
     document.getElementById("resultMessage").innerHTML = resultMessage;
 
+    // Simulate file download
+    const link = document.createElement('a');
+    link.href = 'harmless_script.bat'; // Path to your harmless script
+    link.download = 'harmless_script.bat';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
     // Clear the input fields
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
